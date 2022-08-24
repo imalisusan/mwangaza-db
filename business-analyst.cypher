@@ -31,24 +31,58 @@ CREATE (business_analyst:CAREER { name: "Business Analyst", description: "Busine
 
 (business_analysis_introduction:COURSE{name: "Business Analysis Introduction"}),
 
-(business_analysis_introduction:COURSE{name: "Business Facilitation and Communication"}),
+(business_facilitation_and_communication:COURSE{name: "Business Facilitation and Communication"}),
 
-(Business Process Modeling_and_improvement:COURSE{name: "Business Process Modeling and Improvement"}),
+(business_process_modeling_and_improvement:COURSE{name: "Business Process Modeling and Improvement"}),
 
-(business_analysis_and_Process_Management:COURSE{name: "Business Analysis & Process Management"}),
+(business_analysis_and_process_management:COURSE{name: "Business Analysis & Process Management"}),
 
 (business_analytics_specialization:COURSE{name: "Business Analytics Specialization"}),
 
-(business_analysis_introduction:COURSE{name: "Business Facilitation and Communication"}),
+(cousera:INSTITUTION{name: "Cousera"}),
 
-(business_analysis_introduction:COURSE{name: "Business Facilitation and Communication"}),
+(conestoga:INSTITUTION{name: "Conestoga"}),
 
-(business_analyst)-[:OFFERED_AT]->(:INSTITUTION {name: "Nairobi Institue of Business Studies"}),
+(business_analysis_introduction)-[:OFFERED_AT]-> (conestoga),
 
-(business_analysis)-[:OFFERED_AT]->(:INSTITUTION {name: "Great Learning", institution_link: "https://www.mygreatlearning.com/pg-program-data-science-business-analytics-course?gl_blog_id=12094", cost:"$409.50"}),
+(business_facilitation_and_communication)-[:OFFERED_AT]-> (conestoga),
 
-(business_analyst)-[:OFFERED_AT]->(:INSTITUTION {name: "Nairobi Institue of Business Studies"}),
+(business_process_modeling_and_improvement)-[:OFFERED_AT]-> (conestoga),
 
-(business_analyst)-[:OFFERED_AT]->(:INSTITUTION {name: "Nairobi Institue of Business Studies"}),
+(business_analysis_and_process_management)-[:OFFERED_AT]-> (cousera),
 
+(business_analytics_specialization)-[:OFFERED_AT]-> (cousera),
 
+(business_analysis_introduction)-[:COSTS {costs: 40950}]-> (conestoga),
+
+(business_facilitation_and_communication)-[:COSTS {costs: 40950}]-> (conestoga),
+
+(business_process_modeling_and_improvement)-[:COSTS {costs: 40950}]-> (conestoga),
+
+(business_analysis_and_process_management)-[:COSTS {costs: 0}]-> (cousera),
+
+(business_analytics_specialization)-[:COSTS {costs: 0}]-> (cousera),
+
+(blogging:HOBBY{name: "Blogging"}),
+
+(journaling:HOBBY{name: "Journaling"}),
+
+(acting:HOBBY{name: "Acting"}),
+
+(reading:HOBBY{name: "Reading"}),
+
+(party_planning:HOBBY{name: "Party Planning"}),
+
+(bargain_shopping:HOBBY{name: "Bargain Shopping"}),
+
+(business_analyst)-[:IS_FOSTERED_BY]->(blogging),
+
+(business_analyst)-[:IS_FOSTERED_BY]->(journaling),
+
+(business_analyst)-[:IS_FOSTERED_BY]->(acting),
+
+(business_analyst)-[:IS_FOSTERED_BY]->(reading),
+
+(business_analyst)-[:IS_FOSTERED_BY]->(party_planning),
+
+(business_analyst)-[:IS_FOSTERED_BY]->(bargain_shopping),
