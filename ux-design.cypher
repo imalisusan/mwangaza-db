@@ -23,38 +23,103 @@ CREATE (ui_ux_design:CAREER { name: "UI/UX Design", description: "UX Design is t
 
 (balsamiq: TOOL{name: "Balsamiq"}),
 
-(figma: TECHNICAL_TOPIC{name: "Figma"}),
+(figma: TOOL{name: "Figma"}),
 
-(mockflow: TECHNICAL_TOPIC{name: "Mockflow"}),
+(mockflow: TOOL{name: "Mockflow"}),
 
-(axure: TECHNICAL_TOPIC{name: "Axure"}),
+(axure: TOOL{name: "Axure"}),
 
-(adobe_xd: TECHNICAL_TOPIC{name: "Adobe XD"}),
+(adobe_xd: TOOL{name: "Adobe XD"}),
 
-(figma: TECHNICAL_TOPIC{name: "Figma"}),
+(figma: TOOL{name: "Figma"}),
 
-(sketch: TECHNICAL_TOPIC{name: "Sketch"}),
+(sketch: TOOL{name: "Sketch"}),
 
-(framer: TECHNICAL_TOPIC{name: "Framer"}),
+(framer: TOOL{name: "Framer"}),
 
-(protopie: TECHNICAL_TOPIC{name: "Protopie"}),
+(protopie: TOOL{name: "Protopie"}),
 
-(avocode: TECHNICAL_TOPIC{name: "Avocode"}),
+(avocode: TOOL{name: "Avocode"}),
 
-(zeplin: TECHNICAL_TOPIC{name: "Zeplin"}),
+(zeplin: TOOL{name: "Zeplin"}),
 
-(adobe_illlustrator: TECHNICAL_TOPIC{name: "Adobe Illustrator"}),
+(adobe_illlustrator: TOOL{name: "Adobe Illustrator"}),
 
-(corel_draw: TECHNICAL_TOPIC{name: "CorelDraw"}),
+(corel_draw: TOOL{name: "CorelDraw"}),
 
-(spline: TECHNICAL_TOPIC{name: "Spline"}),
+(spline: TOOL{name: "Spline"}),
 
 (atomic_design: TECHNICAL_TOPIC{name: "Atomic Design by Brad Forst"}),
 
 (carbon_design: TECHNICAL_TOPIC{name: "Carbon Design by IBM"}),
 
-(attlassian_design: TECHNICAL_TOPIC{name: "Atlassian Design"}),
+(atlassian_design: TECHNICAL_TOPIC{name: "Atlassian Design"}),
 
 (fluent_design: TECHNICAL_TOPIC{name: "Fluent Design"}),
 
+(dribble: RESOURCE{name: "Dribble" link: "dribble.com"}),
+
+(noun_project: RESOURCE{name: "Noun Project" link: "nounproject.com"}),
+
+(icon_finder: RESOURCE{name: "Icon Finder" link: "iconfinder.com"}),
+
+(flaticon: RESOURCE{name: "Flat Icon" link: "flaticon.com"}),
+
+(coolors: RESOURCE{name: "Coolors" link: "coolors.co"}),
+
+(font_space: RESOURCE{name: "Font Space" link: "fontspace.com"}),
+
+(font_freak: RESOURCE{name: "Font Freak" link: "fontfreak.com"}),
+
+(pixa_bay: RESOURCE{name: "PixaBay" link: "pixabay.com"}),
+
+(unsplash: RESOURCE{name: "Unsplash" link: "unsplash.com"}),
+
+(screenlane: RESOURCE{name: "Screenlane" link: "screenlane.com"}),
+
 (design_guidelines_and_principles)-[:REQUIRES]-> (adaptive_web_design),
+
+(design_guidelines_and_principles)-[:REQUIRES]-> (responsive_design),
+
+(design_guidelines_and_principles)-[:REQUIRES]-> (mobile_first_design),
+
+(design_guidelines_and_principles)-[:REQUIRES]-> (google_material_design),
+
+(design_guidelines_and_principles)-[:REQUIRES]-> (apple_ios_human_interface_guidelines),
+
+(design_guidelines_and_principles)-[:REQUIRES]-> (wcag_guidelines),
+
+(wireframing)-[:REQUIRES]-> (balsamiq),
+
+(wireframing)-[:REQUIRES]-> (figma),
+
+(wireframing)-[:REQUIRES]-> (mockflow),
+
+(prototyping)-[:REQUIRES]-> (axure),
+
+(prototyping)-[:REQUIRES]-> (adobe_xd),
+
+(prototyping)-[:REQUIRES]-> (figma),
+
+(prototyping)-[:REQUIRES]-> (sketch),
+
+(prototyping)-[:REQUIRES]-> (framer),
+
+(prototyping)-[:REQUIRES]-> (protopie),
+
+(prototyping)-[:REQUIRES]-> (zeplin),
+
+(prototyping)-[:REQUIRES]-> (adobe_illlustrator),
+
+(prototyping)-[:REQUIRES]-> (corel_draw),
+
+(prototyping)-[:REQUIRES]-> (spline),
+
+(building_a_design_system)-[:REQUIRES]-> (atomic_design),
+
+(building_a_design_system)-[:REQUIRES]-> (carbon_design),
+
+(building_a_design_system)-[:REQUIRES]-> (atlassian_design),
+
+(building_a_design_system)-[:REQUIRES]-> (fluent_design),
+
