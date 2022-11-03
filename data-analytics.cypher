@@ -1,6 +1,12 @@
 CREATE (data_analytics:CAREER { name: "Data Analytics", description: "Data analytics is the science of analyzing raw data to make conclusions about that information." }) 
  - [:REQUIRES] -> (:SKILL {name: " "}),
 
+(fundamental: STAGE{name: "Fundamentals"}),
+
+(statistics: STAGE{name: "Statistics"}),
+
+(machine_learning: STAGE{name: "Machine Learning"}),
+
 (python:PROGRAMMING_LANGUAGE{name: "Python"}),
 
 (r:PROGRAMMING_LANGUAGE{name: "R"}),
@@ -32,8 +38,6 @@ CREATE (data_analytics:CAREER { name: "Data Analytics", description: "Data analy
 (communication_skill: BASIC_SKILL{name: "Communication Skills"}),
 
 (domain_knowledge: BASIC_SKILL{name: "Domain Knowledge"}),
-
-(problem_solving: BASIC_SKILL{name: "Problem Solving"}),
 
 (dashboarding: BASIC_SKILL{name: "Dashboarding"}),
 
@@ -70,6 +74,26 @@ CREATE (data_analytics:CAREER { name: "Data Analytics", description: "Data analy
 (correlation_measures: TECHNICAL_TOPIC{name: "Correlation Measures"}),
 
 (covariance_matrix: TECHNICAL_TOPIC{name: "Covariance Matrix"}),
+
+(data_scrubbing: TECHNICAL_TOPIC{name: "Data Scrubbing"}),
+
+(regression: TECHNICAL_TOPIC{name: "Regression"}),
+
+(exploratory_data_analysis: TECHNICAL_TOPIC{name: "Exploratory Data Analysis"}),
+
+(reading_cvs_data: TECHNICAL_TOPIC{name: "Reading CVS Data"}),
+
+(training_and_testing_data: TECHNICAL_TOPIC{name: "Training and Testing Data"}),
+
+(data_sources_and_acquisition: TECHNICAL_TOPIC{name: "Data Sources and Acquisition"}),
+
+(decision_tree: TECHNICAL_TOPIC{name: "Decision Tree"}),
+
+(multi-dimensional_data_model: TECHNICAL_TOPIC{name: "Milti-dimenasional Data Model"}),
+
+(data_replication: TECHNICAL_TOPIC{name: "Data Replication"}),
+
+(regression: TECHNICAL_TOPIC{name: "Regression"}),
 
 (data_analytics)-[:REQUIRES]-> (python),
 
@@ -138,3 +162,25 @@ CREATE (data_analytics:CAREER { name: "Data Analytics", description: "Data analy
 (data_analytics)-[:REQUIRES]-> (correlation_measures),
 
 (data_analytics)-[:REQUIRES]-> (covariance_matrix),
+
+(data_analytics)-[:REQUIRES]-> (data_scrubbing),
+
+(data_analytics)-[:REQUIRES {month: 1}]-> (data_scrubbing),
+
+(data_analytics)-[:REQUIRES {month: 1}]-> (exploratory_data_analysis),
+
+(data_analytics)-[:REQUIRES {month: 1}]-> (regression),
+
+(data_analytics)-[:REQUIRES {month: 1}]-> (data_scrubbing),
+
+(data_analytics)-[:REQUIRES {month: 1}]-> (reading_cvs_data),
+
+(data_analytics)-[:REQUIRES {month: 1}]-> (training_and_testing_data),
+
+(data_analytics)-[:REQUIRES {month: 2}]-> (data_sources_and_acquisition),
+
+(data_analytics)-[:REQUIRES {month: 2}]-> (decision_tree),
+
+(data_analytics)-[:REQUIRES {month: 2}]-> (data_replication),
+
+(data_analytics)-[:REQUIRES {month: 3}]-> (multi-dimensional_data_model),
